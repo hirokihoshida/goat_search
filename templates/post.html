@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+
+{% block content %}
+{% if sm %}
+You chose small size {{ sm }}
+{% else %}
+No size picked
+{% endif %}
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+This is post
+{% endblock %}

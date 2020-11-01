@@ -1,0 +1,15 @@
+{% extends "header.html" %}
+
+{% block content %}
+<form role="form" action="{{ url_for('index') }}" method="POST">
+    {{ search.smallSize.label }}<br>
+    {{ search.smallSize(size=32) }}<br>
+    {{ search.largeSize.label }}<br>
+    {{ search.largeSize(size=32) }}<br>
+    {{ search.searchQuery.label }}<br>
+    {{ search.searchQuery(size=32) }}<br>
+    {{ search.search.label }}<br>
+    {{ search.search(size=32) }}<br>
+</form>
+This is get
+{% endblock %}
