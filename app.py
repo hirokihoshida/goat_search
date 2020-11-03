@@ -16,6 +16,7 @@ def index():
     if request.method == 'POST':
         smallestSize = request.form.get('smallSize')
         df = getShoe(request.form.get('searchQuery'))
+        
         return render_template('post.html', sm=smallestSize, tables=[df.to_html(classes='data')], titles=df.columns.values)
     else:
         s = SearchForm()
